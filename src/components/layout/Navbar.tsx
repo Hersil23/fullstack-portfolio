@@ -2,7 +2,7 @@
  * @fileoverview Componente de navegación principal
  * @description Navbar responsive con logo, links, selector de idioma y menú móvil
  * @author Herasi Silva
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 "use client";
@@ -11,12 +11,11 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { navigation } from "@/data/content";
+import { useLanguage } from "@/context/LanguageContext";
 
 // ============================================================================
-// TIPOS
+// TEXTOS
 // ============================================================================
-
-type Language = "es" | "en";
 
 const navTexts = {
   es: {
@@ -41,8 +40,8 @@ const navTexts = {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [language, setLanguage] = useState<Language>("es");
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
