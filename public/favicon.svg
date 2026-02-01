@@ -1,0 +1,47 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente para el borde -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="50%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <!-- Gradiente para los símbolos < > -->
+    <linearGradient id="bracketGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="50%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <!-- Gradiente metálico para HS -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="20%" stop-color="#d4d4d4"/>
+      <stop offset="40%" stop-color="#a3a3a3"/>
+      <stop offset="60%" stop-color="#737373"/>
+      <stop offset="80%" stop-color="#a3a3a3"/>
+      <stop offset="100%" stop-color="#525252"/>
+    </linearGradient>
+    <!-- Sombra -->
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <!-- Fondo principal -->
+  <rect x="5" y="5" width="110" height="110" rx="12" ry="12" fill="#0f0f0f"/>
+  
+  <!-- Borde con gradiente -->
+  <rect x="5" y="5" width="110" height="110" rx="12" ry="12" fill="none" stroke="url(#borderGradient)" stroke-width="3"/>
+  
+  <!-- Símbolo < izquierdo -->
+  <path d="M8 60 L30 32 L38 32 L20 60 L38 88 L30 88 Z" fill="url(#bracketGradient)" filter="url(#shadow)"/>
+  
+  <!-- Símbolo > derecho -->
+  <path d="M112 60 L90 32 L82 32 L100 60 L82 88 L90 88 Z" fill="url(#bracketGradient)" filter="url(#shadow)"/>
+  
+  <!-- Letras HS centradas -->
+  <text x="60" y="75" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="url(#metalGradient)" filter="url(#shadow)" text-anchor="middle">HS</text>
+  
+  <!-- Apóstrofe/comilla DENTRO del recuadro, arriba a la derecha -->
+  <line x1="92" y1="28" x2="100" y2="15" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/>
+</svg>

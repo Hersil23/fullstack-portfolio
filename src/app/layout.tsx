@@ -54,6 +54,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Herasi Silva" }],
   creator: "Herasi Silva",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "es_ES",
