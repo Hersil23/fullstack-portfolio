@@ -1,0 +1,93 @@
+{
+  "navbar": {
+    "about": "About",
+    "techStack": "Tech Stack",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "hireCta": "Hire Me"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Herasi Silva",
+    "title": "Full Stack Developer",
+    "description": "I build modern, scalable and high-performance web applications. Turning ideas into digital solutions.",
+    "cta": "View Projects",
+    "ctaSecondary": "Download CV"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Get to know me",
+    "description": "I'm a Full Stack Developer certified by Academia Lexpin, specialized in building complete web applications from frontend to backend. My approach combines clean code, optimal performance and exceptional user experiences.",
+    "experience": "Experience",
+    "experienceText": "Building professional web solutions",
+    "projects": "Projects",
+    "projectsText": "Successfully completed",
+    "certification": "Certification",
+    "certificationText": "Academia Lexpin - Full Stack Developer"
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "subtitle": "My development stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Recent work",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "pacigest": {
+      "title": "PaciGest Plus",
+      "description": "Complete SaaS system for medical practice management. Includes scheduling, patient records, billing and admin panel.",
+      "tags": ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"]
+    },
+    "sistemaVentas": {
+      "title": "Sales System",
+      "description": "Streaming accounts management platform with inventory control, customers and WhatsApp communication.",
+      "tags": ["PHP", "MySQL", "Bootstrap", "WhatsApp API"]
+    },
+    "sankalpa": {
+      "title": "Sankalpa Ilumina",
+      "description": "E-commerce for artisanal candles and soaps with shopping cart, admin panel and product management.",
+      "tags": ["PHP", "MySQL", "Tailwind CSS", "JavaScript"]
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "How can I help you?",
+    "web": {
+      "title": "Web Development",
+      "description": "Modern, responsive and SEO-optimized websites that highlight your brand."
+    },
+    "webapp": {
+      "title": "Web Applications",
+      "description": "Complete web systems with backend, database and admin panel."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Online stores with shopping cart, payments and inventory management."
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "Technical support, updates and continuous improvements for your project."
+    },
+    "cta": "Request Quote"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's work together",
+    "description": "Have a project in mind? I'm available for new projects. Get in touch!",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "social": "Social Media",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Created by",
+    "location": "Venezuela"
+  }
+}

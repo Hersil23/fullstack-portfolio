@@ -1,0 +1,93 @@
+{
+  "navbar": {
+    "about": "Sobre Mí",
+    "techStack": "Tecnologías",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "hireCta": "Contáctame"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Herasi Silva",
+    "title": "Full Stack Developer",
+    "description": "Desarrollo aplicaciones web modernas, escalables y de alto rendimiento. Transformo ideas en soluciones digitales.",
+    "cta": "Ver Proyectos",
+    "ctaSecondary": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Conóceme",
+    "description": "Soy desarrollador Full Stack certificado por Academia Lexpin, especializado en crear aplicaciones web completas desde el frontend hasta el backend. Mi enfoque combina código limpio, rendimiento óptimo y experiencias de usuario excepcionales.",
+    "experience": "Experiencia",
+    "experienceText": "Desarrollando soluciones web profesionales",
+    "projects": "Proyectos",
+    "projectsText": "Completados exitosamente",
+    "certification": "Certificación",
+    "certificationText": "Academia Lexpin - Full Stack Developer"
+  },
+  "techStack": {
+    "title": "Tecnologías",
+    "subtitle": "Mi stack de desarrollo",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Trabajo reciente",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código",
+    "pacigest": {
+      "title": "PaciGest Plus",
+      "description": "Sistema SaaS completo para gestión de consultas médicas. Incluye agenda, historial de pacientes, facturación y panel administrativo.",
+      "tags": ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"]
+    },
+    "sistemaVentas": {
+      "title": "Sistema de Ventas",
+      "description": "Plataforma de gestión de cuentas de streaming con control de inventario, clientes y comunicación vía WhatsApp.",
+      "tags": ["PHP", "MySQL", "Bootstrap", "WhatsApp API"]
+    },
+    "sankalpa": {
+      "title": "Sankalpa Ilumina",
+      "description": "E-commerce de velas y jabones artesanales con carrito de compras, panel admin y gestión de productos.",
+      "tags": ["PHP", "MySQL", "Tailwind CSS", "JavaScript"]
+    }
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "¿Cómo puedo ayudarte?",
+    "web": {
+      "title": "Desarrollo Web",
+      "description": "Sitios web modernos, responsivos y optimizados para SEO que destacan tu marca."
+    },
+    "webapp": {
+      "title": "Aplicaciones Web",
+      "description": "Sistemas web completos con backend, base de datos y panel de administración."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tiendas online con carrito de compras, pagos y gestión de inventario."
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "description": "Soporte técnico, actualizaciones y mejoras continuas para tu proyecto."
+    },
+    "cta": "Solicitar Cotización"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Trabajemos juntos",
+    "description": "¿Tienes un proyecto en mente? Estoy disponible para nuevos proyectos. ¡Contáctame!",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "social": "Redes Sociales",
+    "copy": "Copiar",
+    "copied": "Copiado"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "madeWith": "Creado por",
+    "location": "Venezuela"
+  }
+}
