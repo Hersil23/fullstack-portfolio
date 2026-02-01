@@ -2,7 +2,7 @@
  * @fileoverview Componente de navegación principal
  * @description Navbar responsive con logo, links, selector de idioma y menú móvil
  * @author Herasi Silva
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 "use client";
@@ -40,13 +40,19 @@ const navTexts = {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const { language, setLanguage } = useLanguage();
 
+  // Detectar cuando el scroll pasa la sección About
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
+        setIsVisible(window.scrollY < aboutBottom);
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -77,9 +83,10 @@ export default function Navbar() {
           top-4 sm:top-5 lg:top-6
           left-4 sm:left-6 lg:left-12
           right-4 sm:right-6 lg:right-12
-          transition-all duration-300 ease-in-out
+          transition-all duration-500 ease-in-out
           rounded-xl
-          ${isScrolled ? "bg-bg-primary/95 backdrop-blur-md shadow-lg shadow-black/20" : "bg-transparent"}
+          bg-transparent
+          ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}
         `}
       >
         <div className="flex items-center justify-between py-4 px-4 sm:px-6">
@@ -98,7 +105,7 @@ export default function Navbar() {
                 priority
               />
             </div>
-            <span className="text-text-primary font-bold text-base sm:text-lg lg:text-xl transition-colors duration-300 group-hover:text-accent">
+            <span className="text-text-primary font-bold text-base sm:text-lg lg:text-xl transition-colors duration-300 group-hover:text-accent drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               Herasi.dev
             </span>
           </Link>
@@ -110,7 +117,7 @@ export default function Navbar() {
                 <li key={item.id}>
                   <Link
                     href={item.href}
-                    className="text-text-secondary text-base font-medium transition-colors duration-300 hover:text-accent relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+                    className="text-text-secondary text-base font-medium transition-colors duration-300 hover:text-accent relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                   >
                     {getText(item.id as keyof typeof navTexts.es)}
                   </Link>
@@ -122,15 +129,15 @@ export default function Navbar() {
             <div className="flex items-center gap-1">
               <button
                 onClick={() => setLanguage("es")}
-                className={`px-2 py-1 text-base font-medium transition-all duration-300 ${language === "es" ? "text-accent" : "text-text-muted hover:text-text-secondary"}`}
+                className={`px-2 py-1 text-base font-medium transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${language === "es" ? "text-accent" : "text-text-muted hover:text-text-secondary"}`}
                 aria-label="Español"
               >
                 ES
               </button>
-              <span className="text-text-muted">/</span>
+              <span className="text-text-muted drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">/</span>
               <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-1 text-base font-medium transition-all duration-300 ${language === "en" ? "text-accent" : "text-text-muted hover:text-text-secondary"}`}
+                className={`px-2 py-1 text-base font-medium transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] ${language === "en" ? "text-accent" : "text-text-muted hover:text-text-secondary"}`}
                 aria-label="English"
               >
                 EN
