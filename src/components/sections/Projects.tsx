@@ -125,6 +125,18 @@ const projects: Project[] = [
     demo: "https://pacigestplus.com",
   },
   {
+  id: "portfolio-frontend",
+  name: "Frontend Portfolio",
+  nameES: "Portfolio Frontend",
+  description: "My first portfolio showcasing frontend projects before transitioning to full-stack development",
+  descriptionES: "Mi primer portfolio mostrando proyectos frontend antes de mi transición a desarrollo full-stack",
+  image: "/images/projects/portfolio-frontend.png",
+  tech: ["React", "Next.js", "Tailwind", "GSAP"],
+  category: "real",
+  github: "https://github.com/Hersil23/Portfolio-dev-frontend",
+  demo: "https://front.herasi.dev",
+},
+  {
     id: "hersilshop",
     name: "HersilShop",
     nameES: "HersilShop",
