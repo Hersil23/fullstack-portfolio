@@ -12,6 +12,9 @@ import TechStack from "@/components/sections/TechStack";
 import CursorGlow from "@/components/ui/CursorGlow";
 import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
+
 
 
 export default function Home() {
@@ -25,27 +28,9 @@ export default function Home() {
         <CursorGlow />
         <Projects />
         <Services />
+        <Contact />
+        <Footer />
         
-        {/* Placeholder para las siguientes secciones */}
-        <section id="about" className="min-h-screen bg-bg-secondary flex items-center justify-center">
-          <h2 className="text-4xl font-bold text-text-primary">About</h2>
-        </section>
-
-        <section id="tech-stack" className="min-h-screen bg-bg-primary flex items-center justify-center">
-          <h2 className="text-4xl font-bold text-text-primary">Tech Stack</h2>
-        </section>
-
-        <section id="projects" className="min-h-screen bg-bg-secondary flex items-center justify-center">
-          <h2 className="text-4xl font-bold text-text-primary">Projects</h2>
-        </section>
-
-        <section id="services" className="min-h-screen bg-bg-primary flex items-center justify-center">
-          <h2 className="text-4xl font-bold text-text-primary">Services</h2>
-        </section>
-
-        <section id="contact" className="min-h-screen bg-bg-secondary flex items-center justify-center">
-          <h2 className="text-4xl font-bold text-text-primary">Contact</h2>
-        </section>
       </main>
     </>
   );
