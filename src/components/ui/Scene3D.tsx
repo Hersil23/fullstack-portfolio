@@ -2,12 +2,12 @@
  * @fileoverview Escena 3D interactiva con figuras geométricas y logo cubo
  * @description Renderiza figuras geométricas flotantes y cubo con logo centrado
  * @author Herasi Silva
- * @version 1.8.0
+ * @version 1.9.0
  */
 
 "use client";
 
-import { useRef, Suspense } from "react";
+import { useRef, Suspense, useState, useEffect } from "react";
 import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
 import { Float } from "@react-three/drei";
 import * as THREE from "three";
@@ -22,6 +22,26 @@ interface GeometricShapeProps {
   speed?: number;
   shape: "box" | "sphere" | "torus" | "octahedron" | "cone";
   size?: number;
+}
+
+// ============================================================================
+// HOOK PARA DETECTAR MÓVIL
+// ============================================================================
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  return isMobile;
 }
 
 // ============================================================================
@@ -81,9 +101,13 @@ function GeometricShape({ position, color, speed = 1, shape, size = 0.3 }: Geome
   );
 }
 
-function LogoCube() {
+function LogoCube({ isMobile }: { isMobile: boolean }) {
   const cubeRef = useRef<THREE.Mesh>(null);
   const texture = useLoader(THREE.TextureLoader, "/images/logo-herasi.png");
+
+  // Tamaño responsivo: más pequeño en móvil
+  const cubeSize = isMobile ? 1.2 : 1.8;
+  const cubeY = isMobile ? 0.8 : 1.2;
 
   useFrame((state) => {
     if (cubeRef.current) {
@@ -104,15 +128,16 @@ function LogoCube() {
 
   return (
     <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.2}>
-      <mesh ref={cubeRef} position={[0, 1.2, 0]} material={materials}>
-        <boxGeometry args={[1.8, 1.8, 1.8]} />
+      <mesh ref={cubeRef} position={[0, cubeY, 0]} material={materials}>
+        <boxGeometry args={[cubeSize, cubeSize, cubeSize]} />
       </mesh>
     </Float>
   );
 }
 
-function FloatingShapes() {
-  const shapes: GeometricShapeProps[] = [
+function FloatingShapes({ isMobile }: { isMobile: boolean }) {
+  // Posiciones ajustadas para móvil (más cerca del centro)
+  const desktopShapes: GeometricShapeProps[] = [
     { position: [-4, 2.5, -2], color: "#ea580c", speed: 0.8, shape: "octahedron", size: 0.45 },
     { position: [-3.2, 1.8, -3], color: "#fb923c", speed: 1.1, shape: "box", size: 0.35 },
     { position: [4, 2.2, -2], color: "#fb923c", speed: 1.2, shape: "box", size: 0.45 },
@@ -127,6 +152,19 @@ function FloatingShapes() {
     { position: [0, -3.5, -3], color: "#c2410c", speed: 1.1, shape: "octahedron", size: 0.35 },
   ];
 
+  const mobileShapes: GeometricShapeProps[] = [
+    { position: [-1.8, 2.2, -2], color: "#ea580c", speed: 0.8, shape: "octahedron", size: 0.3 },
+    { position: [-1.5, -0.5, -3], color: "#fb923c", speed: 1.1, shape: "box", size: 0.25 },
+    { position: [1.8, 2, -2], color: "#fb923c", speed: 1.2, shape: "box", size: 0.3 },
+    { position: [1.5, -0.8, -3], color: "#c2410c", speed: 0.7, shape: "sphere", size: 0.25 },
+    { position: [-1.2, -2.5, -2], color: "#c2410c", speed: 0.6, shape: "torus", size: 0.3 },
+    { position: [1.2, -2.3, -2], color: "#ea580c", speed: 1, shape: "octahedron", size: 0.25 },
+    { position: [0, 3, -3], color: "#ea580c", speed: 0.7, shape: "box", size: 0.2 },
+    { position: [0, -3.2, -3], color: "#c2410c", speed: 1.1, shape: "sphere", size: 0.2 },
+  ];
+
+  const shapes = isMobile ? mobileShapes : desktopShapes;
+
   return (
     <>
       {shapes.map((shape, index) => (
@@ -136,7 +174,7 @@ function FloatingShapes() {
   );
 }
 
-function Scene() {
+function Scene({ isMobile }: { isMobile: boolean }) {
   return (
     <>
       <ambientLight intensity={0.7} />
@@ -146,9 +184,9 @@ function Scene() {
 
       <MouseFollower>
         <Suspense fallback={null}>
-          <LogoCube />
+          <LogoCube isMobile={isMobile} />
         </Suspense>
-        <FloatingShapes />
+        <FloatingShapes isMobile={isMobile} />
       </MouseFollower>
     </>
   );
@@ -159,13 +197,15 @@ function Scene() {
 // ============================================================================
 
 export default function Scene3D() {
+  const isMobile = useIsMobile();
+
   return (
     <Canvas
-      camera={{ position: [0, 0, 7], fov: 50 }}
+      camera={{ position: [0, 0, 7], fov: isMobile ? 55 : 50 }}
       gl={{ antialias: true, alpha: true }}
       style={{ background: "transparent" }}
     >
-      <Scene />
+      <Scene isMobile={isMobile} />
     </Canvas>
   );
 }
