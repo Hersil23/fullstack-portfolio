@@ -11,6 +11,7 @@ import About from "@/components/sections/About";
 import TechStack from "@/components/sections/TechStack";
 import CursorGlow from "@/components/ui/CursorGlow";
 import Projects from "@/components/sections/Projects";
+import Services from "@/components/sections/Services";
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <TechStack />
         <CursorGlow />
         <Projects />
+        <Services />
         
         {/* Placeholder para las siguientes secciones */}
         <section id="about" className="min-h-screen bg-bg-secondary flex items-center justify-center">
