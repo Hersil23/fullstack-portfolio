@@ -43,13 +43,13 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const { language, setLanguage } = useLanguage();
 
-  // Detectar cuando el scroll pasa la sección About
+  // Detectar cuando el scroll pasa la sección Hero
   useEffect(() => {
     const handleScroll = () => {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
-        setIsVisible(window.scrollY < aboutBottom);
+      const heroSection = document.getElementById("hero");
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setIsVisible(window.scrollY < heroBottom);
       }
     };
 

@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
+import CursorGlow from "@/components/ui/CursorGlow";
 
 // ============================================================================
 // CONFIGURACIÓN DE FUENTES
@@ -82,9 +83,10 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-bg-primary text-text-primary`}
-      >
-        <LanguageProvider>{children}</LanguageProvider>
-      </body>
+          >
+            <CursorGlow />
+            <LanguageProvider>{children}</LanguageProvider>
+          </body>
     </html>
   );
 }

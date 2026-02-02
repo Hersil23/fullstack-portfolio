@@ -8,6 +8,10 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import TechStack from "@/components/sections/TechStack";
+import CursorGlow from "@/components/ui/CursorGlow";
+import Projects from "@/components/sections/Projects";
+
 
 export default function Home() {
   return (
@@ -16,6 +20,9 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <TechStack />
+        <CursorGlow />
+        <Projects />
         
         {/* Placeholder para las siguientes secciones */}
         <section id="about" className="min-h-screen bg-bg-secondary flex items-center justify-center">
