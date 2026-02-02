@@ -2,7 +2,7 @@
  * @fileoverview Layout principal de la aplicación
  * @description Configura metadatos, fuentes y estructura HTML base
  * @author Herasi Silva
- * @version 1.1.0
+ * @version 1.2.0
  */
 
 import type { Metadata } from "next";
@@ -57,12 +57,21 @@ export const metadata: Metadata = {
     title: "Herasi Silva | Full Stack Developer",
     description:
       "Desarrollador Full Stack especializado en React, Next.js, Node.js y MongoDB.",
+    images: [
+      {
+        url: "https://herasi.dev/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Herasi Silva - Full Stack Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Herasi Silva | Full Stack Developer",
     description:
       "Desarrollador Full Stack especializado en React, Next.js, Node.js y MongoDB.",
+    images: ["https://herasi.dev/images/og-image.png"],
   },
   robots: {
     index: true,
@@ -83,10 +92,10 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-bg-primary text-text-primary`}
-          >
-            <CursorGlow />
-            <LanguageProvider>{children}</LanguageProvider>
-          </body>
+      >
+        <CursorGlow />
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
