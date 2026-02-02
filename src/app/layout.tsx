@@ -59,9 +59,9 @@ export const metadata: Metadata = {
       "Desarrollador Full Stack especializado en React, Next.js, Node.js y MongoDB.",
     images: [
       {
-        url: "https://herasi.dev/images/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "https://herasi.dev/images/logo-herasi.png",
+        width: 512,
+        height: 512,
         alt: "Herasi Silva - Full Stack Developer",
       },
     ],
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Herasi Silva | Full Stack Developer",
     description:
       "Desarrollador Full Stack especializado en React, Next.js, Node.js y MongoDB.",
-    images: ["https://herasi.dev/images/og-image.png"],
+    images: ["https://herasi.dev/images/logo-herasi.png"],
   },
   robots: {
     index: true,
