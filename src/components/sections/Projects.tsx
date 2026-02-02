@@ -434,7 +434,7 @@ export default function Projects() {
           className="filters-container flex justify-center gap-8 flex-wrap"
           style={{ marginBottom: "50px" }}
         >
-          {(["all", "educational", "real"] as const).map((filterType) => (
+          {(["all", "real", "educational"] as const).map((filterType) => (
             <button
               key={filterType}
               onClick={() => setFilter(filterType)}
