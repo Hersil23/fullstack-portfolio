@@ -2,7 +2,7 @@
  * @fileoverview Sección de Servicios
  * @description Muestra los servicios ofrecidos con precios y CTA a WhatsApp
  * @author Herasi Silva
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 "use client";
@@ -175,29 +175,29 @@ function ServiceCard({ service, language, quoteText }: ServiceCardProps) {
   const price = language === "es" ? service.priceES : service.price;
 
   return (
-    <div className="service-card group relative bg-[#141414] rounded-2xl p-5 border border-border/50 transition-all duration-500 hover:border-accent/50 flex flex-col h-full min-h-[260px]">
+    <div className="service-card group relative bg-[#141414] rounded-2xl p-6 sm:p-7 lg:p-8 border border-border/50 transition-all duration-500 hover:border-accent/50 flex flex-col items-center text-center">
       {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-transparent to-transparent rounded-2xl" />
       </div>
 
       {/* Icon */}
-      <div className="relative z-10 text-accent mb-3 transition-transform duration-300 group-hover:scale-110">
+      <div className="relative z-10 text-accent mb-4 transition-transform duration-300 group-hover:scale-110">
         {service.icon}
       </div>
 
       {/* Title */}
-      <h3 className="relative z-10 text-lg font-semibold text-text-primary mb-2 group-hover:text-accent transition-colors duration-300">
+      <h3 className="relative z-10 text-lg font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-300">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="relative z-10 text-sm text-text-secondary mb-3 flex-grow">
+      <p className="relative z-10 text-sm text-text-secondary mb-5">
         {description}
       </p>
 
       {/* Price */}
-      <p className="relative z-10 text-xl font-bold text-accent mb-3">
+      <p className="relative z-10 text-xl font-bold text-accent mb-4">
         {price}
       </p>
 
