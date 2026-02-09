@@ -175,7 +175,7 @@ function ServiceCard({ service, language, quoteText }: ServiceCardProps) {
   const price = language === "es" ? service.priceES : service.price;
 
   return (
-    <div className="service-card group relative bg-[#141414] rounded-2xl p-6 sm:p-7 lg:p-8 border border-border/50 transition-all duration-500 hover:border-accent/50 flex flex-col items-center text-center">
+    <div className="service-card group relative bg-[#141414] rounded-2xl pt-8 pb-6 px-6 sm:pt-9 sm:pb-7 sm:px-7 lg:pt-10 lg:pb-8 lg:px-8 border border-border/50 transition-all duration-500 hover:border-accent/50 flex flex-col items-center text-center min-h-[280px] sm:min-h-[300px]">
       {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-transparent to-transparent rounded-2xl" />
@@ -319,7 +319,7 @@ export default function Services() {
         </p>
 
         {/* Grid de servicios */}
-        <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
           {services.map((service) => (
             <ServiceCard
               key={service.id}
