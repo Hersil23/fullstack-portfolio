@@ -192,7 +192,7 @@ function ServiceCard({ service, language, quoteText }: ServiceCardProps) {
       </h3>
 
       {/* Description */}
-      <p className="relative z-10 text-sm text-text-secondary mb-12">
+      <p className="relative z-10 text-sm text-text-secondary mb-9">
         {description}
       </p>
 
