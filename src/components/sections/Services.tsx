@@ -175,7 +175,7 @@ function ServiceCard({ service, language, quoteText }: ServiceCardProps) {
   const price = language === "es" ? service.priceES : service.price;
 
   return (
-    <div className="service-card group relative bg-[#141414] rounded-2xl pt-8 pb-6 px-6 sm:pt-9 sm:pb-7 sm:px-7 lg:pt-10 lg:pb-8 lg:px-8 border border-border/50 transition-all duration-500 hover:border-accent/50 flex flex-col items-center text-center min-h-[280px] sm:min-h-[300px]">
+    <div className="service-card group relative bg-[#141414] rounded-2xl pt-8 pb-6 px-6 sm:pt-9 sm:pb-7 sm:px-7 lg:pt-10 lg:pb-8 lg:px-8 border border-border/50 transition-all duration-500 hover:border-accent/50 flex flex-col items-center text-center">
       {/* Glow effect on hover */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-transparent to-transparent rounded-2xl" />
