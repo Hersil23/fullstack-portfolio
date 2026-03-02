@@ -122,8 +122,8 @@ const services: Service[] = [
     titleES: "Dominio + Hosting",
     description: "Annual cPanel hosting, domain registration, and corporate emails",
     descriptionES: "Hosting cPanel anual, registro de dominio y correos corporativos",
-    price: "From $90/year",
-    priceES: "Desde $90/año",
+    price: "From $50/year",
+    priceES: "Desde $50/año",
   },
 ];
 
