@@ -23,7 +23,7 @@ const Scene3D = dynamic(() => import("@/components/ui/Scene3D"), {
 
 const heroTexts = {
   es: {
-    title: "Desarrollador Full Stack",
+    title: "Herasi Silva — Desarrollador Full Stack",
     phrases: [
       "Creo aplicaciones web modernas",
       "Desarrollo sistemas SaaS escalables",
@@ -34,7 +34,7 @@ const heroTexts = {
     secondary: "Contáctame",
   },
   en: {
-    title: "Full Stack Developer",
+    title: "Herasi Silva — Full Stack Developer",
     phrases: [
       "I build modern web applications",
       "I develop scalable SaaS systems",
@@ -50,6 +50,14 @@ const heroTexts = {
 // HOOK TYPEWRITER
 // ============================================================================
 
+/**
+ * Hook que crea un efecto typewriter cíclico entre frases
+ * @param {string[]} phrases - Frases a rotar
+ * @param {number} [typingSpeed=80] - Velocidad de escritura en ms
+ * @param {number} [deletingSpeed=50] - Velocidad de borrado en ms
+ * @param {number} [pauseTime=2000] - Pausa entre frases en ms
+ * @returns {string} Texto actualmente visible
+ */
 function useTypewriter(phrases: string[], typingSpeed = 80, deletingSpeed = 50, pauseTime = 2000) {
   const [displayText, setDisplayText] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);

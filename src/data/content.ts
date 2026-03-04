@@ -229,7 +229,7 @@ export const services: Service[] = [
  */
 export const navigation: NavItem[] = [
   { id: "about", href: "#about" },
-  { id: "techStack", href: "#tech-stack" },
+  { id: "techStack", href: "#technologies" },
   { id: "projects", href: "#projects" },
   { id: "services", href: "#services" },
   { id: "contact", href: "#contact" },

@@ -40,14 +40,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const techTexts = {
   es: {
-    title: "Tecnologías y Herramientas",
-    subtitle: "Lo que uso para crear soluciones digitales",
+    title: "Stack de Desarrollo Web",
+    subtitle: "Tecnologías y herramientas que uso para crear soluciones digitales",
     frontend: "Frontend",
     backend: "Backend / Base de Datos / Herramientas",
   },
   en: {
-    title: "Technologies & Tools",
-    subtitle: "What I use to create digital solutions",
+    title: "Web Development Stack",
+    subtitle: "Technologies and tools I use to create digital solutions",
     frontend: "Frontend",
     backend: "Backend / Database / Tools",
   },
@@ -98,6 +98,13 @@ interface TechCardProps {
   color: string;
 }
 
+/**
+ * Tarjeta de tecnología con icono, nombre y efecto glow al hover
+ * @param {TechCardProps} props - Propiedades del componente
+ * @param {string} props.name - Nombre de la tecnología
+ * @param {IconType} props.Icon - Componente de icono de react-icons
+ * @param {string} props.color - Color hex del icono y efectos
+ */
 function TechCard({ name, Icon, color }: TechCardProps) {
   return (
     <div 
@@ -149,6 +156,13 @@ interface MarqueeProps {
   speed?: number;
 }
 
+/**
+ * Componente de scroll horizontal infinito (marquee)
+ * @param {MarqueeProps} props - Propiedades del componente
+ * @param {React.ReactNode} props.children - Elementos a desplazar
+ * @param {"left" | "right"} [props.direction="left"] - Dirección del desplazamiento
+ * @param {number} [props.speed=40] - Duración del ciclo en segundos
+ */
 function Marquee({ children, direction = "left", speed = 40 }: MarqueeProps) {
   const animationStyle: React.CSSProperties = {
     animationDuration: `${speed}s`,

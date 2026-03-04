@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const aboutTexts = {
   es: {
-    title: "Sobre Mí",
+    title: "Sobre Mí — Desarrollador Web Full Stack",
     description:
       "Creo aplicaciones web completas, desde la idea hasta el despliegue. Código limpio, interfaces intuitivas y sistemas que escalan. Si puedes imaginarlo, puedo crearlo.",
     metrics: {
@@ -34,7 +34,7 @@ const aboutTexts = {
     availability: "Disponible para proyectos remotos",
   },
   en: {
-    title: "About Me",
+    title: "About Me — Full Stack Web Developer",
     description:
       "I create complete web applications, from idea to deployment. Clean code, intuitive interfaces, and systems that scale. If you can imagine it, I can create it.",
     metrics: {
@@ -53,6 +53,13 @@ const aboutTexts = {
 // HOOK CONTADOR ANIMADO
 // ============================================================================
 
+/**
+ * Hook que anima un contador numérico de 0 hasta el valor objetivo
+ * @param {number} targetValue - Valor final del contador
+ * @param {number} [duration=2] - Duración de la animación en segundos
+ * @param {boolean} startAnimation - Si la animación debe iniciar
+ * @returns {number} Valor actual del contador
+ */
 function useCounterAnimation(
   targetValue: number,
   duration: number = 2,
@@ -97,6 +104,15 @@ interface MetricCardProps {
   startAnimation: boolean;
 }
 
+/**
+ * Tarjeta de métrica con contador animado opcional
+ * @param {MetricCardProps} props - Propiedades del componente
+ * @param {string} props.value - Valor a mostrar (texto estático)
+ * @param {string} props.label - Etiqueta descriptiva
+ * @param {boolean} [props.isNumeric=false] - Si el valor es numérico y debe animarse
+ * @param {number} [props.numericValue=0] - Valor numérico para animar
+ * @param {boolean} props.startAnimation - Si la animación debe iniciar
+ */
 function MetricCard({
   value,
   label,

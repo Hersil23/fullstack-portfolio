@@ -7,7 +7,7 @@
 
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 // ============================================================================
 // TIPOS
@@ -39,6 +39,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
  */
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("es");
+
+  /** Sincroniza el atributo lang del HTML con el idioma seleccionado */
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "es" ? "en" : "es"));

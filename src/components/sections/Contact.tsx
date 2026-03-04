@@ -65,13 +65,13 @@ const socialLinks = [
 
 const texts = {
   es: {
-    title: "Conectemos",
+    title: "Contratar Desarrollador Full Stack",
     subtitle: "Estoy disponible para nuevos proyectos. ¡Contáctame!",
     copied: "¡Copiado!",
     copyright: "Herasi Silva • Full Stack Developer",
   },
   en: {
-    title: "Let's Connect",
+    title: "Hire a Full Stack Developer",
     subtitle: "I'm available for new projects. Get in touch!",
     copied: "Copied!",
     copyright: "Herasi Silva • Full Stack Developer",
@@ -82,6 +82,10 @@ const texts = {
 // COMPONENTE NETWORK ANIMATION
 // ============================================================================
 
+/**
+ * Animación de red de partículas conectadas en canvas
+ * @description Dibuja partículas con movimiento y líneas de conexión entre partículas cercanas
+ */
 function NetworkAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 

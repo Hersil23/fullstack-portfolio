@@ -287,7 +287,7 @@ const projects: Project[] = [
 
 const texts = {
   es: {
-    title: "Mis Proyectos",
+    title: "Proyectos Web Full Stack",
     subtitle: "Una selección de mi trabajo educativo y profesional",
     all: "Todos",
     educational: "Educativos",
@@ -295,7 +295,7 @@ const texts = {
     viewProject: "Ver Proyecto",
   },
   en: {
-    title: "My Projects",
+    title: "Full Stack Web Projects",
     subtitle: "A selection of my educational and professional work",
     all: "All",
     educational: "Educational",
@@ -314,6 +314,13 @@ interface ProjectCardProps {
   texts: typeof texts.es;
 }
 
+/**
+ * Tarjeta de proyecto con imagen, tecnologías y enlaces
+ * @param {ProjectCardProps} props - Propiedades del componente
+ * @param {Project} props.project - Datos del proyecto
+ * @param {"es" | "en"} props.language - Idioma activo
+ * @param {typeof texts.es} props.texts - Textos traducidos
+ */
 function ProjectCard({ project, language, texts }: ProjectCardProps) {
   const mainLink = project.demo || project.github;
 

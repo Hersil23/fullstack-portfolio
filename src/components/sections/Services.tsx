@@ -133,13 +133,13 @@ const services: Service[] = [
 
 const texts = {
   es: {
-    title: "Mis Servicios",
-    subtitle: "Soluciones digitales para tu negocio",
+    title: "Servicios de Desarrollo Web",
+    subtitle: "Soluciones digitales a medida para tu negocio",
     quote: "Cotizar",
   },
   en: {
-    title: "My Services",
-    subtitle: "Digital solutions for your business",
+    title: "Web Development Services",
+    subtitle: "Custom digital solutions for your business",
     quote: "Get Quote",
   },
 };
@@ -150,6 +150,12 @@ const texts = {
 
 const WHATSAPP_NUMBER = "584145116337";
 
+/**
+ * Genera un enlace de WhatsApp con mensaje pre-escrito según el servicio e idioma
+ * @param {string} service - Nombre del servicio a consultar
+ * @param {"es" | "en"} language - Idioma del mensaje
+ * @returns {string} URL completa de wa.me con texto codificado
+ */
 function getWhatsAppLink(service: string, language: "es" | "en") {
   const message =
     language === "es"
@@ -169,6 +175,13 @@ interface ServiceCardProps {
   quoteText: string;
 }
 
+/**
+ * Tarjeta de servicio con icono, precio y botón de WhatsApp
+ * @param {ServiceCardProps} props - Propiedades del componente
+ * @param {Service} props.service - Datos del servicio
+ * @param {"es" | "en"} props.language - Idioma activo
+ * @param {string} props.quoteText - Texto del botón CTA
+ */
 function ServiceCard({ service, language, quoteText }: ServiceCardProps) {
   const title = language === "es" ? service.titleES : service.title;
   const description = language === "es" ? service.descriptionES : service.description;
