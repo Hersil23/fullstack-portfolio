@@ -287,7 +287,7 @@ const projects: Project[] = [
 
 const texts = {
   es: {
-    title: "Proyectos Web Full Stack",
+    title: "Proyectos de Desarrollo Web",
     subtitle: "Una selección de mi trabajo educativo y profesional",
     all: "Todos",
     educational: "Educativos",
@@ -295,7 +295,7 @@ const texts = {
     viewProject: "Ver Proyecto",
   },
   en: {
-    title: "Full Stack Web Projects",
+    title: "Web Development Projects",
     subtitle: "A selection of my educational and professional work",
     all: "All",
     educational: "Educational",
