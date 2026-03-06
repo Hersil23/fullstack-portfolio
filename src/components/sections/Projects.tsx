@@ -279,6 +279,17 @@ const projects: Project[] = [
     category: "real",
     demo: "https://netpartners.vercel.app",
   },
+  {
+    id: "homesolutions",
+    name: "Home Solutions NC",
+    nameES: "Home Solutions NC",
+    description: "Corporate website for a family-owned house cleaning LLC in North Carolina",
+    descriptionES: "Sitio web corporativo para una LLC de limpieza de hogares en North Carolina",
+    image: "/images/projects/homesolutions.png",
+    tech: ["WordPress"],
+    category: "real",
+    demo: "https://homesolutionsncllc.com",
+  },
 ];
 
 // ============================================================================
