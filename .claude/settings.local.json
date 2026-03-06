@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:mesaclick.vercel.app)",
       "WebFetch(domain:credi-red.vercel.app)",
-      "WebFetch(domain:ventaclick-xi.vercel.app)"
+      "WebFetch(domain:ventaclick-xi.vercel.app)",
+      "Bash(npx next:*)"
     ]
   }
 }
